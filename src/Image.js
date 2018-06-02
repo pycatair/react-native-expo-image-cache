@@ -70,6 +70,7 @@ export default class Image extends React.Component<ImageProps, ImageState> {
         });
         const computedStyle = [
             StyleSheet.absoluteFill,
+            { width: null, height: null },
             _.transform(
                 _.pickBy(StyleSheet.flatten(style), (value, key) => propsToCopy.indexOf(key) !== -1),
                 // $FlowFixMe
